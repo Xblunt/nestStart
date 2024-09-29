@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  postgresql:
+    image: postgres
+    container_name: pg_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: toor
+      POSTGRES_DB: project2xDB
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
